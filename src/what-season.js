@@ -8,7 +8,11 @@ module.exports = function getSeason(date) {
     return test [1];
   } else if (date.getMonth() == 5 || date.getMonth() == 6 || date.getMonth() == 7) {
     return test [2];
-  } else  {
+  } else if (date.getMonth() == 8 || date.getMonth() == 9 || date.getMonth() == 10) {
     return test [3];
+  } else {
+    if (typeof date != 'object' || date == false || date.length <1) {
+      throw new Error();
+    }
   }
 };
